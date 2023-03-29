@@ -1,5 +1,7 @@
 var output = document.querySelector(".ul");
 
+var loaderContainer = document.getElementById("loader-container");
+loaderContainer.style.display = 'flex';
 //the endpoint is the url of the app script having the data of the spreadsheet
 const endpoint1 =
   "https://script.google.com/macros/s/AKfycbzqElWO2hTOS5PsbQd7UaIzaE6W5-FvHidopKTqsEoxG-d1I7zD0DLD5XzVEusrjV6mRQ/exec";
@@ -7,8 +9,8 @@ const endpoint1 =
 fetch(endpoint1) //
   .then((res) => res.json())
   .then((out) => {
+    loaderContainer.style.display = 'none';
     make(out.data);
-    console.log(out.data);
   });
 function make(out) {
   out.forEach((row) => {
@@ -31,8 +33,8 @@ function makeImage(parent, src) {
     src = "https://drive.google.com/uc?export=view&id=" + str[5]; //to get the image from google drive
     var element = document.createElement("img");
     element.setAttribute("src", src);
-    console.log("%cdeveloped by @gokul", "color: red; font-size: 20px");
     parent.appendChild(element);
+    console.log("%cdeveloped by @gokul", "color: green; font-size: 20px");
     return element;
   } else {
     var element = document.createElement("img");
