@@ -31,6 +31,7 @@ function makeImage(parent, src) {
     src = "https://drive.google.com/uc?export=view&id=" + str[5]; //to get the image from google drive
     var element = document.createElement("img");
     element.setAttribute("src", src);
+    console.log("%cdeveloped by @gokul", "color: red; font-size: 20px");
     parent.appendChild(element);
     return element;
   } else {
