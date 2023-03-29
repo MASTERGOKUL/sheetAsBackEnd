@@ -8,7 +8,16 @@
     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7KAYKdsFrMOD9dm7Ze3REw2oaepOUM_8qA&usqp=CAU">
 </head>
 <style>
+    ::selection {
+        color: #3d5af1;
+        background-color: #000;
+    }
+    *{
+        font-family: cursive;
+    }
     .li{
+        padding: 20px;
+        border-bottom:2px #3d5af1 solid ;
         width: 70%;
         list-style: none;
     }
@@ -35,6 +44,14 @@
         border-color: #3d5af1 transparent #3d5af1 transparent;
         border-radius: 50%;
         animation: spin-anim 1.2s linear infinite;
+    }
+    .heading{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .description{
+        font-size: 1.5rem;
+        font-weight: 400;
     }
     
     @keyframes spin-anim {
