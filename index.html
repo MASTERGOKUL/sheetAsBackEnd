@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7KAYKdsFrMOD9dm7Ze3REw2oaepOUM_8qA&usqp=CAU">
-    <title>Sheet As Backend</title>
+    <title>Document</title>
 </head>
 <style>
     .li{
@@ -13,11 +12,44 @@
         list-style: none;
     }
     img{
-        height:40%;
-        width: 40%;
+        height:50%;
+        width: 50%;
     }
+    .loader-container {
+        margin-top: -22px;
+        margin-left: -8px;
+        width: 100%;
+        height: 110%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background: #000;
+        z-index: 1;
+    }
+    .spinner {
+        width: 64px;
+        height: 64px;
+        border: 8px solid;
+        border-color: #3d5af1 transparent #3d5af1 transparent;
+        border-radius: 50%;
+        animation: spin-anim 1.2s linear infinite;
+    }
+    
+    @keyframes spin-anim {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
 </style>
 <body>
+    <div class="loader-container" id="loader-container">
+        <div class="spinner"></div>
+    </div>
     <h1 class="hi">hi how are you tho</h1>
     <div class="out">
         <ul class="ul">
