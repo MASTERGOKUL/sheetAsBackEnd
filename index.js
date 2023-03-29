@@ -34,7 +34,7 @@ function makeImage(parent, src) {
     var element = document.createElement("img");
     element.setAttribute("src", src);
     parent.appendChild(element);
-    console.log("%cdeveloped by @gokul", "color: green; font-size: 20px");
+        console.log("%cdeveloped by Gokul", "font-size: 40px;color: #55aa56;");
     return element;
   } else {
     var element = document.createElement("img");
